@@ -1,5 +1,8 @@
-import main from './scripts/main.js'
+import main from "./scripts/main.js"
 
-console.log('JS : entry point')
+console.log("JS : entry point")
 
 main.init()
+
+
+

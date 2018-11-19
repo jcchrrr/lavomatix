@@ -1,0 +1,13 @@
+$font-family01:'Montserrat' !default;
+$font-family02:'Aller' !default;
+
+//import Google Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600'); 
+ 
+// Aller Regular
+@font-face {
+  font-family: $font-family02;
+  src: url('./assets/fonts/#{$font-family02}/#{$font-family02}_Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 

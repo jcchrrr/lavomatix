@@ -1,0 +1,25 @@
+/* RESET */
+html {
+    font-size: .625em; /* fallback IE8+ */
+    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+
+}
+
+body {
+    font-size: .625em; 
+}
+
+body{  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+body,ul,li,p,div,h1,h2,h3,h4,h5{margin:0px;padding:0px;list-style-type:none;font-weight: normal;}
+a,a img{border:none}
+a{
+    text-decoration:none;
+    &:hover{text-decoration:underline}
+}
+
+*{
+    box-sizing: border-box;
+}

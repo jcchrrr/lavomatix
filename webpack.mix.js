@@ -11,25 +11,22 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/app.js', 'dist/').sass('src/app.scss', 'dist/');
-// mix.js('src/app.js', 'dist/')
-//     .sass('src/app.scss', 'dist/')
-//     .browserSync({
-//       proxy: 'plead.local',
-//       files: [
-//         './dist/app.css',
-//         './dist/app.js',
-//         '../*.html',
-//         // 'wp-content/themes/**/*.css',
-//         //   {
-//         //     match: ['wp-content/themes/**/*.php'],
-//         //     fn:    function (event, file) {
-//         //       /** Custom event handler **/
-//         //     }
-//         //   }
-//       ]
-//     })
-//     .disableNotifications();
+mix.setPublicPath('../dist')
+    .js('src/app.js', '../dist/')
+    .sass('src/app.scss', '../dist/')
+    .copyDirectory('src/assets', '../dist/assets')
+    .browserSync({
+        proxy: "https://github.com",
+        files : [
+            "../dist/app.css",
+            "../dist/app.js",
+            "../*.html"
+        ]
+    })
+    .disableNotifications()
+    .options({
+        processCssUrls: false
+     });
 
 // Full API
 // mix.js(src, output);

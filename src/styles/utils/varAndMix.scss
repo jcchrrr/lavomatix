@@ -1,0 +1,55 @@
+//Variables
+
+$jaune: #ffc000;
+$bleuNuit: #130331;
+$violet: #a47cff;
+$orFonce: #2b2300;
+$rose: #ff1e2f;
+$roseFonce: #3e0014;
+$vertFonce: #1d1e0d;
+$bleuTwitter: #1eb2e7;
+
+//---Breakpoints
+$desktopHD: "only screen and (max-width:1280px)";
+$desktop: "only screen and (max-width:1024px)" ;
+$tablet:  "only screen and (max-width:768px)";
+$mobile: "only screen and (max-width:480px)";
+
+
+// @media #{$desktop}{}
+// @media #{$tablet}{}
+// @media #{$mobile}{}
+
+
+//----mixins
+@mixin rollBorderBottom() {
+    display: inline-block;
+    text-decoration: none;
+    color: $jaune;
+    transition: color 250ms ease;
+    padding-top: .5rem;
+    
+    &::after{
+        transition: width 250ms ease;
+        display: block;
+        clear: both;
+        content:" ";
+        background: $jaune;
+        margin-top: .5rem;
+        height: 1px;
+        width: 0%;
+        color: $jaune;
+        clear: both;
+     }
+     &:hover, &.isActif{color:lighten($jaune,40)}
+     &:hover::after,  &.isActif::after{ width: 100%;}
+ }
+
+//centrer un element
+// https://css-tricks.com/snippets/sass/centering-mixin/
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }

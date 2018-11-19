@@ -1,18 +1,20 @@
-import getContent from './api/content'
-import slider from './components/slider'
+
+import AnimationSliders from "./components/anim-sliders"
+import Portraits from "./components/portraits"
+
 
 const main = {
-  init: function() {
-    console.log('init de l\'app')
+    init: function() {
+        console.log("%cHavas Digital Factory", 'background: #ff1e2f; color: white; padding:10px;');
+        console.log("%chttps://havasdigitalfactory.com", 'background: black; color: #333; padding:10px;');
 
-    getContent().then((val) => {
-      console.log(val)
-      this.myFunction()
-    })
-  },
-  myFunction: function() {
-    slider.init()
-  }
+        Portraits.init();
+        // Portraits();
+        console.log("chargement……");
+        AnimationSliders()
+    
+
+    }
 }
 
-export default main;
+export default main
