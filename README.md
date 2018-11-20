@@ -14,6 +14,7 @@ A simple and conventionnal project structure easy to use.
 ```
 git clone https://github.com/jcchrrr/lavomatix front
 cd front
+rm -rf .git
 npm install
 cp .env_sample .env
 ```
