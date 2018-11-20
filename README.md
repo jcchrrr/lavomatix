@@ -12,7 +12,7 @@ A simple and conventionnal project structure easy to use.
 ### INSTALLATION
 
 ```
-git clone https://github.com/jcchrrr/starter front
+git clone https://github.com/jcchrrr/lavomatix front
 cd front
 npm install
 cp .env_sample .env
