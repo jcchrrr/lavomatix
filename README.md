@@ -31,7 +31,7 @@ These scripts will generate files in the ".env" configuration location
 
 ### CAVEATS
 
-- Windows: You'll probably should have to install cross env
+- todo
 
 #### Credits and documentation
 [Laravel Mix](https://laravel-mix.com/docs/2.1/installation)
