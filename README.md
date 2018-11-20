@@ -25,11 +25,11 @@ the ".env" file contains relative configurations. Feel free to edit it.
 
 These scripts will generate files in the ".env" configuration location
 
-```npm run dev``` - to generate a dev bundle
+```npm run dev``` to generate a dev bundle
 
-```npm run watch``` - to launch BrowserSync and watch **./src**
+```npm run watch``` to launch BrowserSync and watch **./src**
 
-```npm run prod``` - to generate a prod ready dist folder, minified and sourcemapped
+```npm run prod``` to generate a prod ready dist folder, minified and sourcemapped
 
 ### CAVEATS
 
