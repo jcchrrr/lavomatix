@@ -1,5 +1,4 @@
 
-import AnimationSliders from "./components/anim-sliders"
 import Portraits from "./components/portraits"
 
 

@@ -1,11 +1,37 @@
+![Lavomatix starter kit](./logo.jpg)
+
 # LAVOMATIX
 
-##  >> WORK IN PROGRESS <<
+#### JS/CSS bundler
+A simple and conventionnal project structure easy to use.
+> scss and babel-preset-env ready with laravel-mix agnostic bundler
+> [Laravel Mix](https://laravel-mix.com/docs/2.1/installation)
 
-sample project using Lavomatix - a generic structure of project using laravel-mix
+###  /!\ Word In Progress
+
+### INSTALLATION
+
+```git clone https://github.com/jcchrrr/starter front```
+```cd front```
+```npm install```
+```cp .env_sample .env```
+
+the ".env" file contains relative configurations. Feel free to edit it.
 
 
-## USAGE
+### USAGE
 
-- npm i
-- npm run watch
+These scripts will generate files in the ".env" configuration location
+
+```npm run dev``` To generate a dev bundle
+
+```npm run watch``` To launch BrowserSync and watch **./src**
+
+```npm run prod``` To generate a prod ready dist folder, minified and sourcemapped
+
+### CAVEATS
+
+- Windows: You'll probably should have to install cross env
+
+#### Credits and documentation
+[Laravel Mix](https://laravel-mix.com/docs/2.1/installation)
