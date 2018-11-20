@@ -21,7 +21,5 @@
     "dotenv": "^6.1.0",
     "laravel-mix": "^2.1.14"
   },
-  "dependencies": {
-    "lottie-web": "^5.4.1"
-  }
+  "dependencies": {}
 }
