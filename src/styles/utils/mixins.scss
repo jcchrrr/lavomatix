@@ -23,51 +23,6 @@ $resp-xl: 1200px;
     }
 }
 
-// keyframes prefixers --------------------------
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} { @content; }
-    @-moz-keyframes #{$animation-name} { @content; }  
-    @-ms-keyframes #{$animation-name} { @content; }
-    @-o-keyframes #{$animation-name} { @content; }  
-    @keyframes #{$animation-name} { @content; }
-}
-
-// animation prefixers --------------------------
-@mixin animation($content) {
-    -webkit-animation: #{$content};
-    -moz-animation: #{$content};
-    -ms-animation: #{$content};
-    -o-animation: #{$content};
-    animation: #{$content};      
-}
-
-// transition prefixers -------------------------
-@mixin transition($content) {
-    -webkit-transition: #{$content};
-    -moz-transition: #{$content};
-    -ms-transition: #{$content};
-    -o-transition: #{$content};
-    transition: #{$content};
-}
-
-// transform prefixers --------------------------
-@mixin transform($content) {
-    -webkit-transform: #{$content};
-    -moz-transform: #{$content};
-    -ms-transform: #{$content};
-    -o-transform: #{$content};
-    transform: #{$content};
-}
-
-// translate + rotate ---------------------------
-@mixin tlNrt($x, $y, $deg) {
-    -webkit-transform: translate($x, $y) rotate($deg);
-    -moz-transform: translate($x, $y) rotate($deg);
-    -ms-transform: translate($x, $y) rotate($deg);
-    -o-transform: translate($x, $y) rotate($deg);
-    transform: translate($x, $y) rotate($deg);
-}
-
 // add px font-size if rem is not supported -----
 @mixin fs($size) {
     font-size: $size;
