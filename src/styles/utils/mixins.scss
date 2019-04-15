@@ -1,0 +1,114 @@
+$resp-xs: 350px;
+$resp-s: 576px;
+$resp-m: 768px;
+$resp-l: 992px;
+$resp-xl: 1200px;
+
+// responsive -----------------------------------
+@mixin resp($point) {
+    @if $point == 'xs' {
+        @media only screen and (max-width: $resp-xs) { @content; }
+    }
+    @else if $point == 's' {
+        @media only screen and (max-width: $resp-s) { @content; }
+    }
+    @else if $point == 'm' {
+        @media only screen and (max-width: $resp-m) { @content; }
+    }
+    @else if $point == 'l' {
+        @media only screen and (max-width: $resp-l) { @content; }
+    }
+    @else if $point == 'xl' {
+        @media only screen and (max-width: $resp-xl) { @content; }
+    }
+}
+
+// keyframes prefixers --------------------------
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} { @content; }
+    @-moz-keyframes #{$animation-name} { @content; }  
+    @-ms-keyframes #{$animation-name} { @content; }
+    @-o-keyframes #{$animation-name} { @content; }  
+    @keyframes #{$animation-name} { @content; }
+}
+
+// animation prefixers --------------------------
+@mixin animation($content) {
+    -webkit-animation: #{$content};
+    -moz-animation: #{$content};
+    -ms-animation: #{$content};
+    -o-animation: #{$content};
+    animation: #{$content};      
+}
+
+// transition prefixers -------------------------
+@mixin transition($content) {
+    -webkit-transition: #{$content};
+    -moz-transition: #{$content};
+    -ms-transition: #{$content};
+    -o-transition: #{$content};
+    transition: #{$content};
+}
+
+// transform prefixers --------------------------
+@mixin transform($content) {
+    -webkit-transform: #{$content};
+    -moz-transform: #{$content};
+    -ms-transform: #{$content};
+    -o-transform: #{$content};
+    transform: #{$content};
+}
+
+// translate + rotate ---------------------------
+@mixin tlNrt($x, $y, $deg) {
+    -webkit-transform: translate($x, $y) rotate($deg);
+    -moz-transform: translate($x, $y) rotate($deg);
+    -ms-transform: translate($x, $y) rotate($deg);
+    -o-transform: translate($x, $y) rotate($deg);
+    transform: translate($x, $y) rotate($deg);
+}
+
+// add px font-size if rem is not supported -----
+@mixin fs($size) {
+    font-size: $size;
+    font-size: ( $size / 10px ) * 1rem;
+}
+
+// absolute centered ----------------------------
+@mixin center-pos($type, $axis) {
+    @if $type == 'r' {
+        position: relative;
+    }
+    @else if $type == 'a' {
+        position: absolute;
+    }
+    @else if $type == 'f' {
+        position: fixed;
+    }
+    @if $axis == 'x' {
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+    @else if $axis == 'y' {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    @else if $axis == 'xy' {
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+}
+
+// display centered -----------------------------
+@mixin center-dis($axis) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @if $axis == 'x' {
+        flex-direction: row;
+    }
+    @else if $axis == 'y' {
+        flex-direction: column;
+    }
+}
