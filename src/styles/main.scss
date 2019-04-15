@@ -1,4 +1,17 @@
-@import '/utils/reset';
-@import '/utils/resetPlus';
-@import '/utils/vars';
-@import '/utils/fonts';
+// ==============================================
+// import /utils files
+// ==============================================
+
+@import './utils/mixins';
+@import './utils/reset';
+@import './utils/resetPlus';
+@import './utils/vars';
+@import './utils/fonts';
+// import global style at last
+@import './utils/global';
+
+// ==============================================
+// import /utils files
+// ==============================================
+
+// @import './components/header'
